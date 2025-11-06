@@ -1,4 +1,6 @@
-﻿namespace Mehar.Client.ViewModels;
+﻿using Mehar.Client.Base;
+
+namespace Mehar.Client.ViewModels;
 
 public class MainViewModel : ViewModelBase
 {
