@@ -1,0 +1,19 @@
+﻿<style>
+    .sidebar {
+        height: calc(100vh - 48px);
+    }
+</style>
+<MudPaper Square Class="sidebar" MinWidth="240px">
+    <MudList T="string" Dense>
+        <MudTextField T="string"
+                      Label="Search"
+                      Variant="Variant.Outlined"
+                      Margin="Margin.Dense"
+                      Adornment="Adornment.End"
+                      AdornmentIcon="@Icons.Material.Filled.Search" Class="pa-2" />
+        <MudListItem>Link 1</MudListItem>
+        <MudListItem>Link 2</MudListItem>
+        <MudListItem>Link 3</MudListItem>
+        <MudListItem>Link 4</MudListItem>
+    </MudList>
+</MudPaper>
