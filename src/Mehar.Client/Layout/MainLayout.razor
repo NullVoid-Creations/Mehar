@@ -1,14 +1,14 @@
 ﻿@inherits LayoutComponentBase
 
-<MudThemeProvider IsDarkMode="false" />
+<MudThemeProvider IsDarkMode="@IsDarkMode" />
 <MudPopoverProvider />
 <MudDialogProvider />
 <MudSnackbarProvider />
 
 <MudLayout>
-    <MudAppBar Dense Elevation="1"></MudAppBar>
+    <Header @bind-IsDarkMode="IsDarkMode" />
     <MudMainContent>
-        <div  class="d-flex flex-row">
+        <div class="d-flex flex-row">
             <Sidebar />
             <MudContainer Class="py-2">
                 @Body
@@ -16,3 +16,4 @@
         </div>
     </MudMainContent>
 </MudLayout>
+

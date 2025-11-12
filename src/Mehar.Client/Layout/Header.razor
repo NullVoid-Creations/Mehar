@@ -1,0 +1,19 @@
+﻿<style>
+    .logo {
+        width: 32px;
+        height: 32px;
+        filter: brightness(0) invert(1);
+    }
+</style>
+
+<MudAppBar Dense Elevation="1">
+    <MudImage Src="/images/reveno-icon.svg" Class="logo mr-2" />
+    <MudText Typo="Typo.h5" Color="Color.Inherit">Reveno</MudText>
+    <MudSpacer />
+    <MudToggleIconButton Icon="@Icons.Material.Filled.DarkMode"
+                         ToggledIcon="@Icons.Material.Filled.LightMode"
+                         Color="Color.Inherit"
+                         title="@(IsDarkMode ? "Light Mode" : "Dark Mode")"
+                         Toggled="@IsDarkMode"
+                         ToggledChanged="ToggleDarkMode"/>
+</MudAppBar>
