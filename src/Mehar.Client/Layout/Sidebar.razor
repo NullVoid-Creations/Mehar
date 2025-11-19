@@ -2,19 +2,53 @@
     .sidebar {
         height: calc(100vh - 48px);
     }
+
+    .search .mud-input-root {
+        border-radius: 9999px !important;
+    }
+
+    .search .mud-input-outlined fieldset {
+        border-radius: 9999px !important;
+    }
+
+    .search .mud-input-control {
+        border-radius: 9999px !important;
+    }
+
+    .mud-list-item {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+
+    .mud-list-item-icon {
+        margin-right: 4px;
+        min-width: 32px;
+    }
+
+    .mud-selected-item {
+        border-inline-end: solid;
+        border-inline-end-width: 2px;
+    }
 </style>
 
-<MudPaper Square Class="sidebar" MinWidth="240px">
-    <MudList T="string" Dense>
-        <MudTextField T="string"
-                      Label="Search"
-                      Variant="Variant.Outlined"
-                      Margin="Margin.Dense"
-                      Adornment="Adornment.End"
-                      AdornmentIcon="@Icons.Material.Filled.Search" Class="pa-2" />
-        <MudListItem>Link 1</MudListItem>
-        <MudListItem>Link 2</MudListItem>
-        <MudListItem>Link 3</MudListItem>
-        <MudListItem>Link 4</MudListItem>
+<MudPaper Square Class="sidebar" MinWidth="320px">
+    <MudTextField T="string"
+                  Placeholder="Search"
+                  Variant="Variant.Outlined"
+                  Margin="Margin.Dense"
+                  Adornment="Adornment.End"
+                  AdornmentIcon="@Icons.Material.Filled.Search" Class="pa-2 search" />
+    <MudList T="string">
+        <MudListItem Text="Identification and Other Information" Icon="@SvgIcons.ADDRESS_CARD">
+            <NestedList>
+                <MudListItem Text="Identification" Icon="@SvgIcons.ID_BADGE"/>
+                <MudListItem Text="Residence" Icon="@SvgIcons.HOUSE" />
+                <MudListItem Text="Spouse or common-law partner" Icon="@SvgIcons.PERSON_HALF_DRESS" />
+                <MudListItem Text="Tax administration agreements" Icon="@SvgIcons.RECTANGLE_LIST" />
+                <MudListItem Text="Elections Canada" Icon="@SvgIcons.RECTANGLE_LIST" />
+                <MudListItem Text="Indian Act - Exempt income" Icon="@SvgIcons.RECTANGLE_LIST" />
+                <MudListItem Text="Foreign property" Icon="@SvgIcons.HOUSE_FLAG" />
+            </NestedList>
+        </MudListItem>
     </MudList>
 </MudPaper>

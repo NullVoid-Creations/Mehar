@@ -10,10 +10,20 @@
     <MudImage Src="/images/reveno-icon.svg" Class="logo mr-2" />
     <MudText Typo="Typo.h5" Color="Color.Inherit">Reveno</MudText>
     <MudSpacer />
+    <MudMenu Icon="@SvgIcons.LANGUAGE"
+             EndIcon="@Icons.Material.Filled.KeyboardArrowDown"
+             Color="Color.Inherit"
+             TransformOrigin="Origin.TopRight"
+             AnchorOrigin="Origin.BottomRight"
+             title="Language">
+        <MudMenuItem Label="English" Icon="@Icons.Material.Filled.Check" />
+        <MudMenuItem Label="French" />
+    </MudMenu>
     <MudToggleIconButton Icon="@Icons.Material.Filled.DarkMode"
                          ToggledIcon="@Icons.Material.Filled.LightMode"
                          Color="Color.Inherit"
                          title="@(IsDarkMode ? "Light Mode" : "Dark Mode")"
                          Toggled="@IsDarkMode"
-                         ToggledChanged="ToggleDarkMode"/>
+                         ToggledChanged="ToggleDarkMode" />
+
 </MudAppBar>
