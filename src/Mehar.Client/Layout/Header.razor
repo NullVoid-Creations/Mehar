@@ -25,5 +25,17 @@
                          title="@(IsDarkMode ? "Light Mode" : "Dark Mode")"
                          Toggled="@IsDarkMode"
                          ToggledChanged="ToggleDarkMode" />
+    <MudMenu TransformOrigin="Origin.TopRight"
+             AnchorOrigin="Origin.BottomRight"
+             Color="Color.Inherit">
+        <ActivatorContent>
+            <MudAvatar>RW</MudAvatar>
+        </ActivatorContent>
+        <ChildContent>
+            <MudMenuItem Label="Profile" />
+            <MudMenuItem Label="Sign Out" />
+        </ChildContent>
+    </MudMenu>
+
 
 </MudAppBar>
