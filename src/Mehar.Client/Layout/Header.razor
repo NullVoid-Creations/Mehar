@@ -7,7 +7,9 @@
 </style>
 
 <MudAppBar Dense Elevation="1">
-    <MudImage Src="/images/reveno-icon.svg" Class="logo mr-2" />
+    <MudLink Href="/">
+        <MudImage Src="/images/reveno-icon.svg" Class="logo mr-2" />
+    </MudLink>
     <MudText Typo="Typo.h5" Color="Color.Inherit">Reveno</MudText>
     <MudSpacer />
     <MudMenu Icon="@SvgIcons.LANGUAGE"
@@ -15,6 +17,7 @@
              Color="Color.Inherit"
              TransformOrigin="Origin.TopRight"
              AnchorOrigin="Origin.BottomRight"
+             Dense
              title="Language">
         <MudMenuItem Label="English" Icon="@Icons.Material.Filled.Check" />
         <MudMenuItem Label="French" />
@@ -27,15 +30,16 @@
                          ToggledChanged="ToggleDarkMode" />
     <MudMenu TransformOrigin="Origin.TopRight"
              AnchorOrigin="Origin.BottomRight"
-             Color="Color.Inherit">
+             Color="Color.Inherit"
+             Dense>
         <ActivatorContent>
-            <MudAvatar>RW</MudAvatar>
+            <MudAvatar Elevation="2">RW</MudAvatar>
         </ActivatorContent>
         <ChildContent>
-            <MudMenuItem Label="Profile" />
-            <MudMenuItem Label="Sign Out" />
+            <MudMenuItem Label="Profile" Icon="@SvgIcons.USER" />
+            <MudMenuItem Label="Options" Icon="@SvgIcons.GEARS" />
+            <MudDivider />
+            <MudMenuItem Label="Sign Out" Icon="@SvgIcons.ARROW_RIGHT_FROM_BRACKET" />
         </ChildContent>
     </MudMenu>
-
-
 </MudAppBar>
