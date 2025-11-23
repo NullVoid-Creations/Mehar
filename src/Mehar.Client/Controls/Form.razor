@@ -1,0 +1,39 @@
+﻿<PageTitle>Reveno - @(string.IsNullOrEmpty(SubTitle) ? Title : SubTitle)</PageTitle>
+
+<div class="d-flex flex-column">
+    @if (!string.IsNullOrEmpty(Title))
+    {
+        <MudText Typo="Typo.h5" Color="Color.Primary">
+            @Title
+        </MudText>
+    }
+    @if (!string.IsNullOrEmpty(SubTitle))
+    {
+        <MudText Typo="Typo.subtitle1" Class="mt-n2">
+            @SubTitle
+        </MudText>
+    }
+
+    <div class="d-flex flex-column gap-3 my-5">
+        @ChildContent
+    </div>
+
+    <div class="d-flex flex-row gap-2">
+        <MudButton StartIcon="@SvgIcons.FLOPPY_DISK"
+                   ButtonType="ButtonType.Submit"
+                   Variant="Variant.Filled"
+                   Color="Color.Primary"
+                   DropShadow="false"
+                   Disabled="@(!IsSaveEnabled)"
+                   OnClick="OnSaveClick"
+                   Class="@(IsSaveEnabled ? "cursor-pointer" : "cursor-not-allowed")">
+            Save
+        </MudButton>
+        <MudButton ButtonType="ButtonType.Reset"
+                   Disabled="@(!IsResetEnabled)"
+                   OnClick="OnResetClick"
+                   Class="@(IsSaveEnabled ? "cursor-pointer" : "cursor-not-allowed")">
+            Reset
+        </MudButton>
+    </div>
+</div>

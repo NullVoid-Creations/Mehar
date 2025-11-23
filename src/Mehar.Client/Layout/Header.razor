@@ -6,11 +6,11 @@
     }
 </style>
 
-<MudAppBar Dense Elevation="1">
-    <MudLink Href="/">
-        <MudImage Src="/images/reveno-icon.svg" Class="logo mr-2" />
+<MudAppBar Dense Elevation="2">
+    <MudLink Href="/" Class="d-flex flex-row" Color="Color.Inherit" Underline="Underline.None">
+        <MudImage Src="/images/reveno-icon.svg" Class="logo mr-2"/>
+        <MudText Typo="Typo.h5">Reveno</MudText>
     </MudLink>
-    <MudText Typo="Typo.h5" Color="Color.Inherit">Reveno</MudText>
     <MudSpacer />
     <MudMenu Icon="@SvgIcons.LANGUAGE"
              EndIcon="@Icons.Material.Filled.KeyboardArrowDown"
@@ -33,7 +33,7 @@
              Color="Color.Inherit"
              Dense>
         <ActivatorContent>
-            <MudAvatar Elevation="2">RW</MudAvatar>
+            <MudAvatar Elevation="3">RW</MudAvatar>
         </ActivatorContent>
         <ChildContent>
             <MudMenuItem Label="Profile" Icon="@SvgIcons.USER" />

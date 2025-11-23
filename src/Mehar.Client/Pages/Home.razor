@@ -1,10 +1,35 @@
 ﻿@page "/"
 
-<PageTitle>Home</PageTitle>
+<Form Title="Identification and Other Information" SubTitle="Identification" SaveClicked="Save">
+    <TextInput T="string"
+               Label="Label"
+               Watermark="Watermark"
+               HelpText="Help text comes here."
+               BoxText="10000" />
+    <TextInput T="string"
+               Label="Label"
+               Watermark="Watermark"
+               HelpText="Help text comes here."
+               BoxText="10000"
+               IsEnabled="false" />
+    <FormRow>
+        <TextInput T="string"
+                   Label="Label"
+                   Watermark="Watermark"
+                   HelpText="Help text comes here."
+                   BoxText="10000" />
+        <TextInput T="string"
+                   Label="Label"
+                   Watermark="Watermark"
+                   HelpText="Help text comes here."
+                   BoxText="10000"
+                   IsEnabled="false" />
+    </FormRow>
+</Form>
 
-<h1>Hello, world!</h1>
+@code {
+    void Save()
+    {
 
-<TextInput T="string"
-           Label="Label"
-           Watermark="Watermark"
-           HelpText="Help text comes here."/>
+    }
+}

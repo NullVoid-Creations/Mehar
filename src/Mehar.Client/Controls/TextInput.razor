@@ -1,12 +1,37 @@
 ﻿@typeparam T
 
-<div class="d-flex flex-column">
-    <MudText Typo="Typo.body2">@Label</MudText>
-    <MudInput Placeholder="@Watermark"
-              Margin="Margin.Dense"
-              Variant="Variant.Outlined"
-              Disabled="@Disabled"
-              Typo="Typo.body2"
-              @bind-Value="Value" />
-    <MudText Typo="Typo.body2">@HelpText</MudText>
+<div class="d-flex flex-column flex-grow-1">
+    @if (!string.IsNullOrEmpty(Label))
+    {
+        <MudText Typo="Typo.body2" HtmlTag="span">@Label</MudText>
+    }
+    @if (!string.IsNullOrEmpty(BoxText))
+    {
+        <div class="d-flex flex-row align-center">
+            <MudInput Placeholder="@Watermark"
+                      Margin="Margin.Dense"
+                      Variant="Variant.Outlined"
+                      Disabled="@(!IsEnabled)"
+                      Typo="Typo.body2"
+                      @bind-Value="Value"
+                      Class="@(IsEnabled ? "flex-grow-1 cursor-auto" : "flex-grow-1 cursor-not-allowed")" />
+            <MudPaper Outlined Square Class="ms-1 px-2 py-1 cursor-default border-dashed">
+                <MudText Typo="Typo.caption"><b>@BoxText</b></MudText>
+            </MudPaper>
+        </div>
+    }
+    else
+    {
+        <MudInput Placeholder="@Watermark"
+                  Margin="Margin.Dense"
+                  Variant="Variant.Outlined"
+                  Disabled="@(!IsEnabled)"
+                  Typo="Typo.body2"
+                  @bind-Value="Value" 
+                  Class="@(IsEnabled ? "flex-grow-1 cursor-auto" : "flex-grow-1 cursor-not-allowed")" />
+    }
+    @if (!string.IsNullOrEmpty(HelpText))
+    {
+        <MudText Typo="Typo.caption">@HelpText</MudText>
+    }
 </div>
