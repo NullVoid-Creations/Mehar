@@ -5,10 +5,16 @@ namespace Mehar.Client.Controls;
 public partial class TextInput<T>
 {
     [Parameter]
-    public string Label { get; set; } = string.Empty;
+    public string? Label { get; set; }
 
     [Parameter]
-    public string Placeholder {  get; set; } = string.Empty;
+    public string? Watermark { get; set; }
+
+    [Parameter]
+    public string? HelpText { get; set; }
+
+    [Parameter]
+    public bool Disabled { get; set; }
 
     [Parameter]
     public T? Value { get; set; }
