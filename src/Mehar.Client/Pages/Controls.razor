@@ -1,0 +1,37 @@
+﻿@inherits PageBase
+
+@page "/controls"
+
+<Form Title="Available Controls" SubTitle="Controls" SaveClicked="Save">
+    <TextInput T="string"
+               Label="Label"
+               Watermark="Watermark"
+               HelpText="Help text comes here."
+               BoxText="10000" />
+    <TextInput T="string"
+               Label="Label"
+               Watermark="Watermark"
+               HelpText="Help text comes here."
+               BoxText="10000"
+               IsEnabled="false" />
+    <FormRow>
+        <TextInput T="string"
+                   Label="Label"
+                   Watermark="Watermark"
+                   HelpText="Help text comes here."
+                   BoxText="10000" />
+        <TextInput T="string"
+                   Label="Label"
+                   Watermark="Watermark"
+                   HelpText="Help text comes here."
+                   BoxText="10000"
+                   IsEnabled="false" />
+    </FormRow>
+</Form>
+
+@code {
+    void Save()
+    {
+
+    }
+}
