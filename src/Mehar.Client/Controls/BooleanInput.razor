@@ -1,0 +1,25 @@
+﻿@typeparam T
+@inherits InputControlBase<T>
+
+<div class="d-flex flex-column">
+    <div class="d-flex flex-row align-center">
+        <MudSwitch Disabled="@(!IsEnabled)"
+                   @bind-Value="Value"
+                   Class="@(IsEnabled ? "cursor-auto" : "cursor-not-allowed")" />
+        @if (!string.IsNullOrEmpty(Label))
+        {
+            <MudText Typo="Typo.body2" HtmlTag="span" Class="flex-grow-1">@Label</MudText>
+        }
+        @if (!string.IsNullOrEmpty(BoxText))
+        {
+            <MudPaper Outlined Square Class="ms-1 px-2 py-1 cursor-default border-dashed">
+                <MudText Typo="Typo.caption"><b>@BoxText</b></MudText>
+            </MudPaper>
+        }
+    </div>
+    @if (!string.IsNullOrEmpty(HelpText))
+    {
+        <MudText Typo="Typo.caption">@HelpText</MudText>
+    }
+</div>
+
