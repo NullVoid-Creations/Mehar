@@ -4,7 +4,11 @@
 <div class="d-flex flex-column flex-grow-1">
     @if (!string.IsNullOrEmpty(Label))
     {
-        <MudText Typo="Typo.body2" HtmlTag="span">@Label</MudText>
+        <MudText Typo="Typo.body2"
+                 HtmlTag="span"
+                 Class="@(IsRequired ? "required" : string.Empty)">
+            @Label
+        </MudText>
     }
     @if (!string.IsNullOrEmpty(BoxText))
     {
@@ -13,6 +17,8 @@
                       Margin="Margin.Dense"
                       Variant="Variant.Outlined"
                       Disabled="@(!IsEnabled)"
+                      Required="@IsRequired"
+                      MaxLength="@MaxLength"
                       Typo="Typo.body2"
                       @bind-Value="Value"
                       Class="@(IsEnabled ? "flex-grow-1 cursor-auto" : "flex-grow-1 cursor-not-allowed")" />
@@ -27,8 +33,10 @@
                   Margin="Margin.Dense"
                   Variant="Variant.Outlined"
                   Disabled="@(!IsEnabled)"
+                  Required="@IsRequired"
+                  MaxLength="@MaxLength"
                   Typo="Typo.body2"
-                  @bind-Value="Value" 
+                  @bind-Value="Value"
                   Class="@(IsEnabled ? "flex-grow-1 cursor-auto" : "flex-grow-1 cursor-not-allowed")" />
     }
     @if (!string.IsNullOrEmpty(HelpText))

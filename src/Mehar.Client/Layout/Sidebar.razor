@@ -31,18 +31,19 @@
     }
 </style>
 
-<MudPaper Square Class="sidebar" MinWidth="320px" Elevation="2">
+<MudPaper Square Class="sidebar" MinWidth="320px" Elevation="1">
     <MudTextField T="string"
                   Placeholder="Search"
                   Variant="Variant.Outlined"
                   Margin="Margin.Dense"
                   Adornment="Adornment.End"
+                  Clearable
                   AdornmentIcon="@Icons.Material.Filled.Search" Class="pa-2 search" />
     <MudList T="string">
-        <MudListItem Text="Available Controls" Icon="@SvgIcons.RECTANGLE_LIST" Href="/controls"/>
+        <MudListItem Text="Available Controls" Icon="@SvgIcons.RECTANGLE_LIST" Href="/controls" />
         <MudListItem Text="Identification and Other Information" Icon="@SvgIcons.ADDRESS_CARD">
             <NestedList>
-                <MudListItem Text="Identification" Icon="@SvgIcons.ID_BADGE" Href="/identification"/>
+                <MudListItem Text="Identification" Icon="@SvgIcons.ID_BADGE" Href="/identification" />
                 <MudListItem Text="Residence" Icon="@SvgIcons.HOUSE" />
                 <MudListItem Text="Spouse or common-law partner" Icon="@SvgIcons.PERSON_HALF_DRESS" />
                 <MudListItem Text="Tax administration agreements" Icon="@SvgIcons.RECTANGLE_LIST" />

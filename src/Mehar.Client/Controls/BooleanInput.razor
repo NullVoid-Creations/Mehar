@@ -8,7 +8,9 @@
                    Class="@(IsEnabled ? "cursor-auto" : "cursor-not-allowed")" />
         @if (!string.IsNullOrEmpty(Label))
         {
-            <MudText Typo="Typo.body2" HtmlTag="span" Class="flex-grow-1">@Label</MudText>
+            <MudText Typo="Typo.body2"
+                     HtmlTag="span"
+                     Class="@(IsRequired ? "required flex-grow-1" : "flex-grow-1")">@Label</MudText>
         }
         @if (!string.IsNullOrEmpty(BoxText))
         {

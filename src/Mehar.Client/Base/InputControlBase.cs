@@ -14,6 +14,9 @@ public abstract class InputControlBase<T>: ComponentBase
     public bool IsEnabled { get; set; } = true;
 
     [Parameter]
+    public bool IsRequired { get; set; }
+
+    [Parameter]
     public T? Value { get; set; }
 
     [Parameter]

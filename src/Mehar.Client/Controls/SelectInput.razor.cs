@@ -2,11 +2,11 @@ using Microsoft.AspNetCore.Components;
 
 namespace Mehar.Client.Controls;
 
-public partial class TextInput<T>
+public partial class SelectInput<T>
 {
     [Parameter]
     public string? Watermark { get; set; }
 
     [Parameter]
-    public int MaxLength { get; set; }
+    public ICollection<T> Items { get; set; } = [];
 }

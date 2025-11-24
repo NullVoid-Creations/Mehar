@@ -3,7 +3,11 @@
 <div class="d-flex flex-column flex-grow-1">
     @if (!string.IsNullOrEmpty(Label))
     {
-        <MudText Typo="Typo.body2" HtmlTag="span">@Label</MudText>
+        <MudText Typo="Typo.body2"
+                 HtmlTag="span"
+                 Class="@(IsRequired ? "required" : string.Empty)">
+            @Label
+        </MudText>
     }
     @if (!string.IsNullOrEmpty(BoxText))
     {
