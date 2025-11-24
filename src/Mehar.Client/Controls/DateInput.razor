@@ -1,0 +1,41 @@
+﻿@inherits InputControlBase<DateTime?>
+
+<div class="d-flex flex-column flex-grow-1">
+    @if (!string.IsNullOrEmpty(Label))
+    {
+        <MudText Typo="Typo.body2" HtmlTag="span">@Label</MudText>
+    }
+    @if (!string.IsNullOrEmpty(BoxText))
+    {
+        <div class="d-flex flex-row align-center">
+            <MudDatePicker Placeholder="@Watermark"
+                           Margin="Margin.Dense"
+                           Variant="Variant.Outlined"
+                           Editable
+                           Disabled="@(!IsEnabled)"
+                           @bind-Date="Value"
+                           MinDate="@MinDate"
+                           MaxDate="@MaxDate"
+                           Class="@(IsEnabled ? "flex-grow-1 cursor-auto" : "flex-grow-1 cursor-not-allowed")" />
+            <MudPaper Outlined Square Class="ms-1 px-2 py-1 cursor-default border-dashed">
+                <MudText Typo="Typo.caption"><b>@BoxText</b></MudText>
+            </MudPaper>
+        </div>
+    }
+    else
+    {
+        <MudDatePicker Placeholder="@Watermark"
+                       Margin="Margin.Dense"
+                       Variant="Variant.Outlined"
+                       Editable
+                       Disabled="@(!IsEnabled)"
+                       @bind-Date="Value"
+                       MinDate="@MinDate"
+                       MaxDate="@MaxDate"
+                       Class="@(IsEnabled ? "flex-grow-1 cursor-auto" : "flex-grow-1 cursor-not-allowed")" />
+    }
+    @if (!string.IsNullOrEmpty(HelpText))
+    {
+        <MudText Typo="Typo.caption">@HelpText</MudText>
+    }
+</div>
