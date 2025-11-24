@@ -17,6 +17,7 @@
                            Variant="Variant.Outlined"
                            Editable
                            Disabled="@(!IsEnabled)"
+                           Required="@IsRequired"
                            @bind-Date="Value"
                            MinDate="@MinDate"
                            MaxDate="@MaxDate"
@@ -33,6 +34,7 @@
                        Variant="Variant.Outlined"
                        Editable
                        Disabled="@(!IsEnabled)"
+                       Required="@IsRequired"
                        @bind-Date="Value"
                        MinDate="@MinDate"
                        MaxDate="@MaxDate"
