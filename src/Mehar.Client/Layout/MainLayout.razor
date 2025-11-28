@@ -2,6 +2,12 @@
 
 @inject IInteropService InteropService
 
+<style>
+    .body-container {
+        height: calc(100vh - (var(--mud-appbar-height) - var(--mud-appbar-height) / 4));
+    }
+</style>
+
 <MudThemeProvider IsDarkMode="@IsDarkMode" />
 <MudPopoverProvider />
 <MudDialogProvider />
@@ -12,7 +18,7 @@
     <MudMainContent>
         <div class="d-flex flex-row">
             <Sidebar />
-            <MudContainer Class="py-2">
+            <MudContainer Gutters="false" Class="py-2 body-container">
                 @Body
             </MudContainer>
         </div>

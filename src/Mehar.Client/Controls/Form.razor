@@ -1,24 +1,36 @@
 ﻿<PageTitle>Reveno - @(string.IsNullOrEmpty(SubTitle) ? Title : SubTitle)</PageTitle>
 
-<div class="d-flex flex-column">
+<style>
+    .form-container {
+        height: 100%;
+    }
+
+        .form-container > .form-container-content {
+            overflow-y: auto;
+        }
+</style>
+
+<div class="d-flex flex-column form-container">
     @if (!string.IsNullOrEmpty(Title))
     {
-        <MudText Typo="Typo.h5" Color="Color.Primary">
+        <MudText Typo="Typo.h5" Color="Color.Primary" Class="px-6">
             @Title
         </MudText>
     }
     @if (!string.IsNullOrEmpty(SubTitle))
     {
-        <MudText Typo="Typo.subtitle1" Class="mt-n2">
+        <MudText Typo="Typo.subtitle1" Class="mt-n2 px-6">
             @SubTitle
         </MudText>
     }
 
-    <div class="d-flex flex-column gap-3 my-4">
-        @ChildContent
+    <div class="form-container-content my-4">
+        <div class="d-flex flex-column gap-3 px-6">
+            @ChildContent
+        </div>
     </div>
 
-    <div class="d-flex flex-row gap-2 mt-2">
+    <div class="d-flex flex-row gap-2 mt-2 px-6">
         <MudButton StartIcon="@SvgIcons.FLOPPY_DISK"
                    ButtonType="ButtonType.Submit"
                    Variant="Variant.Filled"
