@@ -11,7 +11,7 @@
         {
             <MudText Typo="Typo.body2"
                      HtmlTag="span"
-                     Class="@(IsRequired ? "required flex-grow-1" : "flex-grow-1")">@Label</MudText>
+                     Class="@(IsRequired ? "required" : string.Empty)">@Label</MudText>
         }
         @if (!string.IsNullOrEmpty(BoxText))
         {

@@ -1,0 +1,40 @@
+﻿@inherits PageBase
+
+@page "/residence"
+
+<Form Title="Identification and Other Information" SubTitle="Residence">
+    <SelectInput T="string" Label="Province / territory" HelpText="Province or territory of residence on December 31, 2024." />
+    <BooleanInput T="bool" Label="Is your current address different than mailing address?" />
+    <TextInput T="string" Label="Current address" Watermark="apartment number, street" />
+    <FormRow>
+        <TextInput T="string" Label="PO Box" />
+        <TextInput T="string" Label="Rural Route" />
+    </FormRow>
+    <FormRow>
+        <TextInput T="string" Label="City" />
+        <SelectInput T="string" Label="Province / territory" />
+        <TextInput T="string" Label="Postal code" />
+    </FormRow>
+    <BooleanInput T="bool" Label="Are you self-employed?" />
+    <TextInput T="string" Label="Business name" />
+    <TextInput T="string" Label="Address" Watermark="suite number, street" />
+    <FormRow>
+        <TextInput T="string" Label="PO Box" />
+        <TextInput T="string" Label="Rural Route" />
+    </FormRow>
+    <FormRow>
+        <TextInput T="string" Label="City" />
+        <SelectInput T="string" Label="Province / territory" />
+        <TextInput T="string" Label="Postal code" />
+    </FormRow>
+
+    <BooleanInput T="bool" Label="Are you a resident of Canada?" />
+    <FormRow>
+        <BooleanInput T="bool" Label="Did you immigrate in 2024?" />
+        <DateInput Label="Date of entry" HelpText="If you became a resident of Canada in 2024 for income tax purposes, enter your date of entry." />
+    </FormRow>
+    <FormRow>
+        <BooleanInput T="bool" Label="Did you emigrate in 2024?" />
+        <DateInput Label="Date of departure" HelpText="If you ceased to be a resident of Canada in 2024 for income tax purposes, enter your date of departure." />
+    </FormRow>
+</Form>

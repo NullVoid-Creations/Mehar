@@ -21,7 +21,7 @@
                            @bind-Date="Value"
                            MinDate="@MinDate"
                            MaxDate="@MaxDate"
-                           Class="@(IsEnabled ? "flex-grow-1 cursor-auto" : "flex-grow-1 cursor-not-allowed")" />
+                           Class="@(IsEnabled ? "cursor-auto" : "cursor-not-allowed")" />
             <MudPaper Outlined Square Class="ms-1 px-2 py-1 cursor-default border-dashed">
                 <MudText Typo="Typo.caption"><b>@BoxText</b></MudText>
             </MudPaper>
@@ -38,7 +38,7 @@
                        @bind-Date="Value"
                        MinDate="@MinDate"
                        MaxDate="@MaxDate"
-                       Class="@(IsEnabled ? "flex-grow-1 cursor-auto" : "flex-grow-1 cursor-not-allowed")" />
+                       Class="@(IsEnabled ? "cursor-auto" : "cursor-not-allowed")" />
     }
     @if (!string.IsNullOrEmpty(HelpText))
     {

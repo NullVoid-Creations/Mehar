@@ -22,7 +22,7 @@
                        Dense
                        Clearable
                        @bind-Value="Value"
-                       Class="@(IsEnabled ? "flex-grow-1 cursor-auto" : "flex-grow-1 cursor-not-allowed")">
+                       Class="@(IsEnabled ? "cursor-auto" : "cursor-not-allowed")">
                 @foreach (var item in Items)
                 {
                     <MudSelectItem Value="item">@item</MudSelectItem>
@@ -44,7 +44,7 @@
                    Dense
                    Clearable
                    @bind-Value="Value"
-                   Class="@(IsEnabled ? "flex-grow-1 cursor-auto" : "flex-grow-1 cursor-not-allowed")">
+                   Class="@(IsEnabled ? "cursor-auto" : "cursor-not-allowed")">
             @foreach (var item in Items)
             {
                 <MudSelectItem Value="item">@item</MudSelectItem>
