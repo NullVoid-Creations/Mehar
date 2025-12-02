@@ -1,0 +1,18 @@
+﻿@inherits PageBase
+
+@page "/partner"
+
+<Form Title="Identification and Other Information" SubTitle="Spouse or common-law partner">
+    <FormRow>
+        <TextInput T="string" Label="First name" />
+        <TextInput T="string" Label="Middle name" />
+        <TextInput T="string" Label="Last name" />
+    </FormRow>
+    <TextInput T="string" Label="Social insurance number (SIN)" />
+    <BooleanInput T="bool" Label="Is your partner self employed?" />
+    <TextInput T="string" Label="Partner's net income" />
+    <FormRow>
+        <TextInput T="string" Label="Universal child care benefit (UCCB)" />
+        <TextInput T="string" Label="UCCB repayment" />
+    </FormRow>
+</Form>
