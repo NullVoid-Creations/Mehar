@@ -1,0 +1,13 @@
+﻿@inherits PageBase
+
+@page "/share-information"
+
+<Form Title="Identification and Other Information" SubTitle="Share contact information">
+    <BooleanInput T="bool" Label="Do you have Canadian citizenship?" />
+    <BooleanInput T="bool" Label="Share your information with Elections Canada?" HelpText="As a Canadian citizen, do you authorize the CRA to give your name, address, date of birth, and citizenship to Elections Canada to update the National Register of Electors or, if you are 14 to 17 years of age, the Register of Future Electors?" />
+    <MudText Typo="Typo.caption">Your authorization is valid until you file your next tax return. Your information will only be used for purposes permitted under the Canada Elections Act, which include sharing lists of electors produced from the National Register of Electors with provincial and territorial electoral agencies, members of Parliament, registered and eligible political parties, and candidates at election time.</MudText>
+    <MudText Typo="Typo.caption">Your information in the Register of Future Electors will be included in the National Register of Electors once you turn 18 and your eligibility to vote is confirmed. Information from the Register of Future Electors can be shared only with provincial and territorial electoral agencies that are allowed to collect future elector information. In addition, Elections Canada can use information in the Register of Future Electors to provide youth with educational information about the electoral process.</MudText>
+    <BooleanInput T="bool" Label="Share your information with organ and tissue donor registry?" HelpText="authorize the CRA to provide my full name, email address and postal code to BC Transplant so that it may contact or send information to me by email about organ and tissue donation. For more information about organ and tissue donation in British Columbia and Canada, go to
+canada.ca/organ-tissue-donation
+." />
+</Form>
