@@ -5,6 +5,14 @@ VisualStudioVersion = 18.0.11205.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mehar.Client", "Mehar.Client\Mehar.Client.csproj", "{D75F10B8-A5AA-430A-8D8A-FD6F655580A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mehar.Server.Api", "Mehar.Server.Api\Mehar.Server.Api.csproj", "{CE3F7248-3938-4F92-8DF4-5B3A02954F96}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mehar.Shared", "Mehar.Shared\Mehar.Shared.csproj", "{31DB6733-6584-48C3-B334-63379AC1D504}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mehar.Server.Data", "Mehar.Server.Data\Mehar.Server.Data.csproj", "{E880FCA1-A039-4D1B-AD82-9651AB9EDDF7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mehar.Server.Services", "Mehar.Server.Services\Mehar.Server.Services.csproj", "{E10B6204-86AD-47E3-9842-82F7DCFF28BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{D75F10B8-A5AA-430A-8D8A-FD6F655580A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D75F10B8-A5AA-430A-8D8A-FD6F655580A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D75F10B8-A5AA-430A-8D8A-FD6F655580A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE3F7248-3938-4F92-8DF4-5B3A02954F96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE3F7248-3938-4F92-8DF4-5B3A02954F96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE3F7248-3938-4F92-8DF4-5B3A02954F96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE3F7248-3938-4F92-8DF4-5B3A02954F96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31DB6733-6584-48C3-B334-63379AC1D504}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31DB6733-6584-48C3-B334-63379AC1D504}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31DB6733-6584-48C3-B334-63379AC1D504}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31DB6733-6584-48C3-B334-63379AC1D504}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E880FCA1-A039-4D1B-AD82-9651AB9EDDF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E880FCA1-A039-4D1B-AD82-9651AB9EDDF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E880FCA1-A039-4D1B-AD82-9651AB9EDDF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E880FCA1-A039-4D1B-AD82-9651AB9EDDF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E10B6204-86AD-47E3-9842-82F7DCFF28BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E10B6204-86AD-47E3-9842-82F7DCFF28BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E10B6204-86AD-47E3-9842-82F7DCFF28BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E10B6204-86AD-47E3-9842-82F7DCFF28BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
